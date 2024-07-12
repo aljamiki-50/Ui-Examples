@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border: 13px soild black;
+  border-style: double;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #e74c3c;
+}
+
+nav ul li a:focus {
+  background-color: yellow;
+}
+
+.search-icon,
+.cart-icon {
+  font-size: 20px;
+}
+
+.cart-count {
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 2px;
+  width: 25px;
+  background-color: #000;
+  margin: 4px 0;
+}
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 10px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+/* Section side  */
+#ui1 {
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+}
+
+#snapchatProfile {
+  position: relative;
+  width: 414px;
+  height: 896px;
+  background-color: #fffc00;
+  background-image: linear-gradient(to bottom, #fffc00, #ffffff);
+  border-radius: 20px;
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* firstDiv here  */
+#profileHeader {
+  position: relative;
+  padding-top: 35px;
+  padding-inline: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  span:nth-child(odd) {
+    color: #6a515e;
+  }
+
+  span:nth-child(2) {
+    color: #878ede;
+    font-size: 24px;
+    font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: 400;
+  }
+  span:nth-child(3) {
+    cursor: pointer;
+  }
+  pan:nth-child(3) hover {
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+#Menu {
+  /*  */
+  height: 300px;
+  position: absolute;
+  top: 70px;
+  right: 18px;
+  visibility: hidden;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+
+  ul {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20%;
+
+    padding-inline: 20px;
+    padding-block: 1rem;
+    border-radius: 20px;
+    li {
+      color: black;
+      font-weight: bold;
+      border-bottom: 3px solid grey;
+      border-width: 100%;
+      width: 100%;
+      padding-bottom: 6px;
+    }
+  }
+  ul li:hover {
+    background-color: #da5afa;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+#Menu.show {
+  opacity: 1;
+  height: 300px;
+  position: absolute;
+  top: 70px;
+  right: 18px;
+  opacity: 1;
+  visibility: visible;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+}
+
+#Menu.show ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduce the gap between list items */
+}
+
+#Menu.show ul li {
+  color: #333; /* Snapchat's primary text color */
+  font-weight: bold;
+  font-size: 16px; /* Increase font size for better readability */
+  padding: 12px; /* Add some padding for a more compact look */
+  border-bottom: 1px solid #ddd; /* Reduce border width and color */
+  transition: background-color 0.2s ease-in-out; /* Add a transition effect */
+}
+
+#Menu.show ul li:hover {
+  background-color: #da5afa; /* Snapchat's accent color */
+  color: #fff;
+  cursor: pointer;
+}
+
+#Menu.show ul li:last-child {
+  border-bottom: none; /* Remove border from last list item */
+}
+/* End of  firstDiv here  */
+
+/* <!-- 2nd div with pic --> */
+#profileHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 43px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add a compactable effect */
+  transition: height 0.3s ease-in-out;
+  /* overflow: hidden; */
+}
+
+#profileHero.compact {
+  height: 60px;
+  padding: 10px;
+}
+
+#profileHero div {
+  width: 126px;
+  height: 126px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* Add a compactable effect */
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+#profileHero.compact div {
+  width: 40px;
+  height: 40px;
+}
+
+#profileHero div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgb(171, 23, 166);
+}
+
+#profileHero h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a4262;
+  margin-bottom: 5px;
+  /* Add a compactable effect */
+  transition: font-size 0.3s ease-in-out;
+}
+
+#profileHero.compact h3 {
+  font-size: 14px;
+}
+
+#profileHero p {
+  font-size: 14px;
+  color: #89a6dc;
+  margin-bottom: 10px;
+  /* Add a compactable effect */
+  transition: font-size 0.3s ease-in-out;
+}
+
+#profileHero.compact p {
+  font-size: 12px;
+}
+
+/* End of  <!-- 2nd div with pic --> */
+
+/* <!-- 3nd div with details --> */
+#profileDetails {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px 12%;
+  margin-block: 3%;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+}
+
+#profileDetails div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+#profileDetails p {
+  color: #9cb1d8;
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+#profileDetails span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+/* <!-- End Of 3nd div with details --> */
+
+/* <!-- 4nd div with EditProfile --> */
+#editProfile {
+  margin: 0 auto;
+  padding-block: 10px;
+  padding-inline: 18px;
+  background-color: #da5afa;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+
+  span:nth-child(1) {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  div {
+    cursor: pointer;
+    background-color: #878ede;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-inline: auto;
+    padding-block: 30%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+
+    input {
+      padding-block: 10px;
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      /*  */
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #cccccc; /* Light gray border */
+      border-radius: 5px;
+      font-size: 17px;
+      font-weight: 400;
+      color: #666666; /* Medium gray text */
+    }
+
+    input:focus {
+      border-color: #aaaaaa; /* Dark gray border on focus */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    input[type="text"] {
+      height: 40px;
+    }
+  }
+
+  .showEditPanel {
+    /* display: block; */
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    background-color: #878ede;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-inline: auto;
+    padding-block: 30%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      /*  */
+      /* max-width: 400px;
+      margin: 40px auto;
+      padding: 20px; */
+      background-color: transparent;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+
+      button {
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 500;
+        padding: 10px 20px;
+        text-align: center;
+        transition: background-color 0.2s ease-in-out;
+      }
+      button:hover {
+        background-color: #0069d9;
+      }
+      button:active {
+        background-color: #0055cc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+/* <!-- End of 4nd div with EditProfile --> */
+
+/* 5th div with swirtch profile */
+#switchProfile {
+  cursor: pointer;
+  background-color: #878ede;
+  width: 55%;
+  height: 36px;
+  margin-inline: auto;
+  margin-block: 7%;
+  padding-block: 1.5rem;
+  /* padding-inline: 20rem; */
+  gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  /* text-align: center; */
+  border-radius: 2rem;
+  div:nth-child(1) {
+    color: #878ede;
+    font-weight: bold;
+    background-color: white;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 17px;
+  }
+  div:nth-child(2) {
+    font-weight: bold;
+    color: white;
+    padding-inline: 0.9rem;
+    padding-block: 0.5rem;
+    border-radius: 17px;
+  }
+}
+/* End of the 5th div with switch profile */
+
+/* <!-- 6th div with pic  --> */
+#profilePic {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 6px;
+  margin: 20px;
+  transition: flex-direction 0.9s ease-in-out;
+}
+
+#profilePic > div {
+  width: calc(50% - 3px);
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#profilePic > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#profilePic > div:first-child {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#profilePic > div:first-child img {
+  height: 264px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#profilePic > div:not(:first-child) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#profilePic > div:not(:first-child) img {
+  height: 130px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* <!-- End of  6th div with pic  --> */
+
+/* here what i am building  */
+/* https://www.figma.com/design/PE3lXBTwk5WShsdr9ix5lq/Snapchat-App-Redesign-(Community)?node-id=0-1&t=hy1nVih7UZ5yewJJ-0 */

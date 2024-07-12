@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Include the ShadCN UI CSS -->
+    <link rel="stylesheet" href="https://cdn.shadcn.com/shadcn-ui/styles.css">
+    <!-- Include the ShadCN UI JavaScript -->
+    <script src="https://cdn.shadcn.com/shadcn-ui/shadcn-ui.js"></script>
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">ShowCase</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#Shop">Shop</a></li>
+                <li><a href="#men">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">Customize</a></li>
+                <li><a href="#" class="search-icon">&#x1F50D;</a></li>
+                <li><a href="#" class="cart-icon">&#x1F6D2; <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section id="ui1" class="">
+        <div id="snapchat">
+            <div id="snapchatProfile">
+                <div id="profileHeader">
+                    <span><img src="snapProfile/arrow-left.png" alt=""></span>
+                    <span>Profile</span>
+                    <span id="dots"><a href="#"><img src="snapProfile/Group 12.png" alt=""></a></span>
+                    <div id="Menu" class="">
+                        <ul>
+                            <li>setting</li>
+                            <li>Edit </li>
+                            <li>Profile</li>
+                            <li>Snaps</li>
+                            <li>Archievs</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- 2nd div with pic -->
+                <div class="" id="profileHero">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1517630800677-932d836ab680?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="" width="126" height="126">
+                    </div>
+                    <h3>Liam MC</h3>
+                    <p id="bio">What Ever College</p>
+                    <p id="Loc">Manchester, UK</p>
+                </div>
+                <!-- /* End of  <!- 2nd div with pic -->
+                <!-- 3nd div with details -->
+                <div class="" id="profileDetails">
+                    <div class="events">
+                        <p>Events</p>
+                        <h1>500%</h1>
+                    </div>
+                    <div class="followers">
+                        <p>followers</p>
+                        <h1>1M</h1>
+                    </div>
+                    <div class="following">
+                        <p>following</p>
+                        <h1>290</h1>
+                    </div>
+                </div>
+                <!-- End Of 3nd div with details -->
+                <!-- 4nd div with EditProfile -->
+                <div class="" id="editProfile">
+                    <span>
+                        Edit Profile
+                    </span>
+                    <span>
+                        <img src="/UI/snapProfile/bx_bx-edit.png" width="18" height="18" alt="">
+                    </span>
+                    <div class="" id="">
+                        <p id="tab"><svg version="1.1" id="icons_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve">
+                                <style>
+                                    .st0 {
+                                        display: none
+                                    }
+
+                                    .st1 {
+                                        display: inline
+                                    }
+
+                                    .st2 {
+                                        fill: #0a0a0a
+                                    }
+                                </style>
+                                <g id="row1_1_">
+                                    <g id="_x34__2_">
+                                        <path class="st2"
+                                            d="M64 .3C28.7.3 0 28.8 0 64s28.7 63.7 64 63.7 64-28.5 64-63.7S99.3.3 64 .3zm0 121C32.2 121.3 6.4 95.7 6.4 64 6.4 32.3 32.2 6.7 64 6.7s57.6 25.7 57.6 57.3c0 31.7-25.8 57.3-57.6 57.3zm21.9-73.2L81 43.3c-.9-.9-2.3-.9-3.2 0L64 57 50.2 43.3c-.9-.9-2.3-.9-3.2 0l-4.9 4.8c-.9.9-.9 2.3 0 3.2L55.9 65 42.1 78.8c-.9.9-.9 2.3 0 3.2l4.9 4.8c.9.9 2.3.9 3.2 0L64 73.1l13.8 13.7c.9.9 2.3.9 3.2 0l4.9-4.8c.9-.9.9-2.3 0-3.2L72.1 65l13.8-13.7c.9-.9.9-2.3 0-3.2z"
+                                            id="error_transparent" />
+                                    </g>
+                                </g>
+                            </svg> </p>
+                        <form action="" id="EditForm">
+                            <input type="text" id="Name" placeholder="Set your Name" required minlength="4"
+                                maxlength="8">
+                            <input type="text" id="formBio" placeholder="Set your Bio/Status">
+                            <input type="text" id="Location" placeholder="Location  - Manchester/UK">
+                            <button type="submit">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- End 4nd div with EditProfile -->
+                <!-- 5th div with swithchprofiles -->
+                <div class="" id="switchProfile">
+                    <div class="">Hosting</div>
+                    <div class="">Attending</div>
+                </div>
+                <!-- end of 5th div with EditProfile -->
+
+                <!-- 6th div with pic  -->
+                <div class="" id="profilePic">
+                    <div id="fullPic">
+                        <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMGZhY2VzfGVufDB8MXwwfHx8MA%3D%3D"
+                            alt="">
+
+                    </div>
+                    <div class="" id="splitPic">
+                        <img src="https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?q=80&w=2841&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+
+                    </div>
+                    <!-- End of  6th div with pic  -->
+                </div>
+
+            </div>
+
+    </section>
+
+</body>
+
+</html>
